@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="Kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        p {
+            font-weight :300;
+            margin-bottom: 30px 0px;
+            width : 600px;
+        }
+
+        strong{
+            font-weight : 400;
+        }
+        .wrap {
+            /*margin : 50px auto;*/
+            /*width : 600px;*/
+            /*padding : 50px;*/
+            display : flex;
+            justify-content: center;
+        }
+        .items input{
+            font-family: 'Stylish', sans-serif;
+            font-size : 16px;
+            letter-spacing: 3px;
+            display : block; /*이부분을 제거했을때, 가운데 정렬하는 법?*/
+            width : 600px;
+            height : 40px;
+            border-radius: 7px;
+            margin-bottom: 12px;
+            border : 1px solid #d3dce6;
+        }
+        input:focus,
+        input:hover,
+        input:active{
+            outline : none;
+            box-shadow: none;
+            border-color : darkblue;
+        }
+        .form_title {
+            font-weight : 400;
+        }
+
+        img {
+            width : 600px;
+        }
+
+        /*label {*/
+        /*    dislpay : block;*/
+        /*    width : 100%;*/
+        /*    line-height : 16px;*/
+        /*}*/
+
+        textarea{
+            display : block;
+        }
+
+        .radio_box {
+            margin : 20px 0px;
+        }
+
+        button {
+            font-family: 'Do Hyeon', sans-serif;
+            box-sizing: border-box;
+            margin : 44px 225px; /*가운데로 보내고 싶은데 직접 좌/우 마진값을 계산해야하는가? (600-150)/2 */
+            width : 150px;
+            height : 30px;
+            font-size : 20px;
+            background-color : dodgerblue;
+            color : white;
+            letter-spacing: 5px;
+            border-radius : 5px;
+            border : none;
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="wrap_items">
+    <img src="https://cphoto.asiae.co.kr/listimglink/1/2019102909100450750_1572307804.jpg" alt="">
+    <h1>에어팟 프로</h1>
+    <h3>가격 : 329,000원</h3>
+    <p> 요즘 핫한 블루투스 이어폰인 <strong>"에어팟 프로"</strong> 입니다.</br> 출시일은 2019년 11월 13일로 많은 앱등이의 사랑을 받은 에어팟2의 다음 모델입니다.</br>
+        주요 기능으로는 노이즈 캔슬링, 공간 오디오 기능이 탑재되있어,</br> 여느 탑 브랜드 블루투스 이어폰과 비교하였을때 엄청 나게 뛰어난 스펙을 제공합니다.</p>
+    <div class =form_index>
+        <div class="form_items">
+
+        <form action="" method="Get">
+
+        <div class="items">
+        <label for="buyer_name" class="form_title">이름</label>
+        <input type="text" id="buyer_name" required placeholder="이름을 입력하세요." >
+        </div>
+
+        <div class="items">
+        <label for="buyer_email" class="form_title">이메일</label>
+        <input type="email" id="buyer_email" required placeholder="이메일을 입력하세요." >
+        </div>
+
+        <div class="items">
+        <label for="quantity" class="form_title">수량</label>
+        <input type="number" id="quantity" required placeholder="--수량을 선택하시오--" >
+        </div>
+
+        <div class="items">
+        <label for="buyer_address" class="form_title">주소</label>
+        <input type="text" id="buyer_address" required placeholder="주소를 입력하세요." >
+        </div>
+
+        <div class="items">
+        <label for="buyer_phoneNumber" class="form_title">전화번호</label>
+        <input type="tel" id="buyer_phoneNumber" required placeholder="전화번호를 입력하세요." >
+        </div>
+
+        <div class="radio_box">타입 :
+        <input type="radio" id="wireless charger" name="charger" value="무선충전">
+        <label for="wireless charger">무선충전</label>
+        <input type="radio" id="wired charger" name="charger" value="선충전">
+        <label for="wired charger">유선충전</label>
+        </div>
+
+        <div class="items">
+        <label for="buyer_requirement">추가 요청사항 : </label>
+        <textarea name="" id="buyer_requirement" cols="30" rows="2" placeholder="추가 요청 사항을 입력하세요!"></textarea>
+        </div>
+
+
+        <button type="submit" onclick="buy()" >주문하기</button>
+
+
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+    function buy(){
+        alert("주문이 완료 되었습니다.")
+    }
+</script>
+</body>
+</html>
